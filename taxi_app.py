@@ -7,7 +7,7 @@ import pandas as pd
 # -------------------------------
 @st.cache_resource
 def load_model():
-    return joblib.load("taxi_model_v2.pkl")
+    return joblib.load("taxi_model_v3.pkl")
 
 model = load_model()
 
@@ -82,3 +82,4 @@ if st.sidebar.button("Predict Fare"):
         """,
         unsafe_allow_html=True
     )
+
