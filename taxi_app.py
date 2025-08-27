@@ -9,7 +9,7 @@ import pandas as pd
 def load_model():
     return joblib.load("taxi_model_v3.pkl")
 
-model = load_model()
+model = load_model() 
 
 # -------------------------------
 # CaseLearn Branding
@@ -100,7 +100,7 @@ if st.session_state.prediction is not None:
                       f"<span style='font-size:22px; color:#333;'>Expected Fare Range: " \
                       f"${lower:.2f} - ${upper:.2f}</span>"
 else:
-    prediction_text = "Pending Prediction..."
+    prediction_text = 'Please fill in the trip details and press "Predict Fare"'
 
 st.markdown(
     f"""
@@ -124,3 +124,4 @@ st.markdown(
     Learn more at [CaseLearn.com](https://caselearn.com)
     """
 )
+
